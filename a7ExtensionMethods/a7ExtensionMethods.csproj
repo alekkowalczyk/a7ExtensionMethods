@@ -43,6 +43,7 @@
     <Compile Include="a7CollectionExtensionMethods.cs" />
     <Compile Include="a7DateTimeExtensions.cs" />
     <Compile Include="a7EnumExtensions.cs" />
+    <Compile Include="a7MappingXElement2Property.cs" />
     <Compile Include="a7ObjectExtensionMethods.cs" />
     <Compile Include="a7StringExtensionMethods.cs" />
     <Compile Include="a7XElementExtensionMethods.cs" />

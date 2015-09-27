@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
-using a7.SharedLibrary.Engine;
 
 namespace a7ExtensionMethods
 {
@@ -326,22 +325,6 @@ namespace a7ExtensionMethods
             return s.XStringToObjectList().ToArray();
         }
 
-
-        public static a7ArgsData XStringToArgsData(this string s)
-        {
-            a7ArgsData args = new a7ArgsData();
-            if (s.IsNotEmpty())
-            {
-                XDocument x = XDocument.Parse(s);
-                foreach (XElement node in x.Root.Elements())
-                {
-                    if (node.HasElements)
-                        args.AddArgument(node.Name.LocalName,node.FirstNode.ToString());
-                    else
-                        args.AddArgument(node.Name.LocalName,node.Value);
-                }
-            }
-            return args;
-        }
+        
     }
 }
